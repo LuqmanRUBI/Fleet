@@ -1,10 +1,10 @@
 import React from "react";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 const About = () => {
   return (
     <>
-      <Helmet>
+      <div>
         <title>Fleet Management</title>
         <meta
           name="description"
@@ -14,7 +14,7 @@ const About = () => {
           name="keywords"
           content="fleet management, about us, vehicle tracking, fleet solutions"
         />
-      </Helmet>
+      </div>
       <main className="bg-gray-100 flex items-center justify-center py-8">
         <section className="w-full max-w-6xl p-6 md:p-12 bg-white rounded-lg shadow-lg">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8">

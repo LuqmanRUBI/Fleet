@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroPng from '../assets/HeroPng.png'; // Ensure the path is correct
+import HeroPng from '../assets/Hero.jpeg'; // Ensure the path is correct
 
 const Hero = () => {
   return (
@@ -8,11 +8,10 @@ const Hero = () => {
         {/* Text Section */}
         <div className="flex flex-col justify-center gap-7 md:pr-8 xl:pr-52 text-center md:text-left pt-20 md:pt-0 px-10">
           <h1 className="text-4xl font-bold font-serif">
-            SKETCH LUXURY INTERIOR DESIGN
+            FLEET MANAGEMENT 
           </h1>
           <p className="text-sm md:text-base text-gray-500 leading-7">
-            Bring your dream to life with one-on-one design help & hand-picked
-            products tailored to your style, space, and budget.
+          We are dedicated to delivering innovative technologies and exceptional service to help businesses streamline their fleet operations and achieve their goals.
           </p>
           <div className="space-x-4">
             <button className="primary-btn uppercase bg-black text-white shadow-[5px_5px_0px_0px_#6c6c6c]">
