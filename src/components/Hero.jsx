@@ -1,34 +1,47 @@
 import React from 'react';
-import HeroPng from '../assets/Hero.jpeg'; // Ensure the path is correct
+import rr from '../assets/rr.jpg'; // Import the map image
 
 const Hero = () => {
   return (
-    <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] gap-10">
-        {/* Text Section */}
-        <div className="flex flex-col justify-center gap-7 md:pr-8 xl:pr-52 text-center md:text-left pt-20 md:pt-0 px-10">
-          <h1 className="text-4xl font-bold font-serif">
-            FLEET MANAGEMENT 
+    <div
+      className="relative w-full h-screen flex items-center"
+      style={{
+        backgroundImage: `url(${rr})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Semi-transparent black overlay covering the full height and width */}
+      <div
+        className="absolute inset-0 bg-black opacity-60"
+        style={{
+          width: '100%', // Cover the full width of the container
+          height: '100%', // Cover the full height of the container
+        }}
+      ></div>
+
+      {/* Content Section */}
+      <div className="relative z-10 flex flex-col justify-center px-5 md:px-20 w-full max-w-4xl">
+        <div className="text-left">
+          <h1 className="text-5xl md:text-6xl font-bold font-serif text-white mb-6 drop-shadow-lg">
+            FLEET MANAGEMENT
           </h1>
-          <p className="text-sm md:text-base text-gray-500 leading-7">
-          We are dedicated to delivering innovative technologies and exceptional service to help businesses streamline their fleet operations and achieve their goals.
+          <p className="text-lg md:text-xl text-white leading-8 max-w-lg mb-8 drop-shadow-lg">
+          Discover the future of fleet management with our cutting-edge solutions designed to transform how you monitor, maintain, and optimize your fleet. From real-time vehicle tracking and advanced AI cameras to seamless driver management and fuel monitoring, we empower you to take full control of your fleet's performance and safety. Experience unparalleled efficiency, reduce operational costs, and ensure compliance—all while keeping your fleet running smoothly. Let’s take your business to new heights—explore our innovative platform now!
           </p>
-          <div className="space-x-4">
-            <button className="primary-btn uppercase bg-black text-white shadow-[5px_5px_0px_0px_#6c6c6c]">
-              Get started
-            </button>
-            <button className="primary-btn uppercase bg-black text-white shadow-[5px_5px_0px_0px_#6c6c6c]">
+          
+          {/* Buttons */}
+          <div className="space-x-4 flex">
+            <button
+              className="primary-btn uppercase bg-white text-black px-6 py-3 rounded-full hover:bg-black hover:text-white transition-shadow shadow-lg shadow-black/50"
+              onClick={() => {
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contact Us
             </button>
           </div>
-        </div>
-        {/* Image Section */}
-        <div className="flex flex-col items-center justify-center">
-          <img
-            src={HeroPng}
-            alt="Luxury Interior Design"
-            className="w-[80%] md:w-[700px] object-cover"
-          />
         </div>
       </div>
     </div>

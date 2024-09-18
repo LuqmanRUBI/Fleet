@@ -3,7 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        'dark-blue': '#003366', // Define your dark blue color here
+      },
       container: {
         center: true,
         padding: {
@@ -13,6 +15,9 @@ export default {
           xl: "5rem",
           "2xl": "6rem",
         },
+      },
+      scrollBehavior: {
+        smooth: 'smooth',
       },
     },
   },

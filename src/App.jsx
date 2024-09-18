@@ -4,6 +4,7 @@ import Service from './components/Service';
 import Footer from './components/Footer';
 import About from './components/About';
 import Hero from './components/Hero';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -25,8 +26,13 @@ const App = () => {
         <Service />
       </section>
 
-      {/* Contact Section (could be part of the Footer or separate) */}
+      {/* Contact Section */}
       <section id="contact">
+        <Contact />
+      </section>
+
+      {/* Footer Section */}
+      <section id="footer">
         <Footer />
       </section>
     </main>

@@ -1,9 +1,10 @@
 import React from "react";
-// import { Helmet } from "react-helmet";
+import pex from '../assets/pex.jpg'; // Import the image
 
 const About = () => {
   return (
     <>
+      {/* Meta tags for SEO */}
       <div>
         <title>Fleet Management</title>
         <meta
@@ -15,25 +16,30 @@ const About = () => {
           content="fleet management, about us, vehicle tracking, fleet solutions"
         />
       </div>
-      <main className="bg-gray-100 flex items-center justify-center py-8">
-        <section className="w-full max-w-6xl p-6 md:p-12 bg-white rounded-lg shadow-lg">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <h1 className="text-3xl font-extrabold text-themeColor md:text-4xl mb-4 md:mb-6">
+      <main className="bg-gray-100 flex items-center justify-center py-12">
+        {/* Section container without extra background or shadow */}
+        <section className="w-full max-w-7xl p-6 md:p-12 lg:p-16">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Image container */}
+            <div className="flex-1">
+              <img
+                src={pex}
+                alt="Fleet Management"
+                className="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
+            {/* Text container */}
+            <div className="flex-1 text-center lg:text-left space-y-6">
+              <h1 className="text-3xl font-extrabold text-themeColor lg:text-4xl mb-2 lg:mb-4">
                 About Us
               </h1>
-              <p className="text-base text-gray-700 md:text-lg leading-relaxed mb-4">
-                Exhibit IT Solutions is a trusted provider of fleet management
-                services in Kenya, serving the East African region. Our expertise
-                includes optimizing vehicle operations, enhancing driver safety,
-                and reducing operational costs through advanced technology. From
-                vehicle tracking and maintenance to driver management and fuel
-                monitoring, our solutions are designed to ensure efficient fleet
-                performance.
+              <p className="text-base text-black-700 lg:text-lg leading-relaxed">
+              Exhibit IT Solutions Limited is a leading Technology Solutions Provider based in Kenya, serving the East African region. We specialize in IT infrastructure and hardware, software development, business consulting, and training services. Our mission is to deliver comprehensive technology solutions, including software system development, deployment, maintenance, and hardware provision, all tailored to meet the unique needs of our clients.
               </p>
-              <button className="bg-brightColor text-white py-3 px-6 rounded-md text-lg font-semibold shadow-md hover:bg-hoverColor transition duration-300">
+              {/* Button commented out */}
+              {/* <button className="bg-brightColor text-white py-3 px-8 rounded-md text-lg font-semibold shadow-md hover:bg-hoverColor transition duration-300">
                 Learn More
-              </button>
+              </button> */}
             </div>
           </div>
         </section>
